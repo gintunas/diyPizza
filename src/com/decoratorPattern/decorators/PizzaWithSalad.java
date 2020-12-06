@@ -5,11 +5,16 @@ import java.util.List;
 public class PizzaWithSalad extends PizzaDecorator implements DiyPizzaOrder {
     public PizzaWithSalad(DiyPizzaOrder pizza) {
         super(pizza);
-        pizza.addSuggestions(List.of("iceberg salad", "pickles", "tomatoes"));
     }
 
     public void addHealthySticker() {
         this.pizza.addItemToOrder("\n🥦");
+    }
+
+    @Override
+    public String getSuggestions() {
+        this.pizza.addSuggestions(List.of("iceberg salad", "pickles", "tomatoes"));
+        return super.getSuggestions();
     }
 
     @Override

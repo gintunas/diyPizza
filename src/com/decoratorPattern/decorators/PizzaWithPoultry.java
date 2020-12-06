@@ -8,7 +8,12 @@ public class PizzaWithPoultry extends PizzaDecorator implements DiyPizzaOrder {
 
     public PizzaWithPoultry(DiyPizzaOrder pizza) {
         super(pizza);
-        pizza.addSuggestions(List.of("chicken tenders", "chicken nuggets", "chicken rolls"));
+    }
+
+    @Override
+    public String getSuggestions() {
+        this.pizza.addSuggestions(List.of("chicken tenders", "chicken nuggets", "chicken rolls"));
+        return super.getSuggestions();
     }
 
     public void addPoultrySauce(){
