@@ -28,7 +28,7 @@ public class PizzaBase implements DiyPizzaOrder {
         for (int i = 0; i < suggestions.size(); i++) {
             builder.append(i).append(": ").append(suggestions.get(i)).append("\n");
         }
-        builder.append("------------------------------------------------------------------");
+        builder.append("------------------------------------------------------------------\n");
         return builder.toString();
     }
 

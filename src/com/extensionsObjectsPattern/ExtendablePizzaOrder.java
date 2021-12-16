@@ -59,7 +59,7 @@ public class ExtendablePizzaOrder implements PizzaOrder {
     @Override
     public String getOrder() {
         modifyOrder();
-        return "\nOrder items: " + this.orderItems.toString();
+        return "\nOrder items: " + this.orderItems;
     }
 
     private void modifyOrder() {
